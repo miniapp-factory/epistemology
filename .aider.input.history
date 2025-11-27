@@ -1,0 +1,60 @@
+
+# 2025-11-27 18:13:57.852337
++Code the following app
++```
++Create a very simple mobile game called “The Uncertainty Meter.” The game must be on the home page when the app opens. Do not use any external dependencies. Everything must work offline and be self-contained.
++
++The app has two screens: a home screen and a game screen.
++
++Home screen: When the app opens, show a clean home screen with a dark background. In the center, show a big button with the text “PLAY.” Above or below the button, show one short line of text that explains the game, for example: “Tap when the growing circle reaches the hidden ideal size.” There should be no other text and no extra buttons. When the user taps the PLAY button, go to the game screen and start the first round immediately.
++
++Game screen – general layout: The background should be dark (for example a dark gradient). In the center of the screen, draw a glowing circle. At the top of the screen, show only numbers: the current total score, and the stored high score. Do not show any other text during gameplay. The game is played in rounds, one round after another, until the player fails.
++
++Game screen – round logic: At the start of each round, do the following steps. 1) Set the growing circle’s radius to a very small value (for example close to zero). 2) Choose a random target radius for the “ideal circle.” The ideal circle radius must always be fairly big. It must never be smaller than 20% of the shortest side of the screen, and never larger than 40% of the shortest side of the screen. This target radius is not drawn yet, only stored internally. 3) Start animating the growing circle: its radius increases smoothly over time from the small starting radius upward. The growth speed must be moderate, not too fast: it should take about 2–3 seconds for the growing circle to reach the maximum possible ideal radius range (40% of the shortest screen side). The animation must be smooth.
++
++Player input: While the circle is growing, if the player taps anywhere on the screen, stop the growth immediately. Freeze the growing circle at its current radius (call this radius R_tap). Then draw the ideal circle in red on top of it, centered at the same point, using the target radius (call this radius R_ideal). The red ideal circle should be clearly visible so the player can see the difference between their circle and the ideal circle.
++
++Success or failure condition: After drawing both circles (the tapped circle and the red ideal circle), decide if the player succeeded in this round. The tap is considered successful if the tapped circle is fully inside the ideal circle. In simple terms, success means R_tap is less than or equal to R_ideal. If R_tap is greater than R_ideal, the player has “overshot” the ideal size and the game should end.
++
++Scoring: For each successful round (R_tap <= R_ideal), calculate the round score as the absolute difference between the two radii: |R_ideal − R_tap|. Add this round score to a running total score. Display the running total score as a number at the top of the screen during the game. After a short delay (for example 0.5–1 second) showing both circles, clear the circles and start the next round using the same round logic: reset the growing circle to small, choose a new random ideal radius, and start the growth again. The game continues round after round until the player fails.
++
++Game over: If the player fails (R_tap > R_ideal), stop the game and show a Game Over overlay on top of the game screen. The background can stay dark. On the Game Over view, show: 1) the final total score, 2) the stored high score (update the high score if the current score is higher than the previous best), 3) a button labeled “SHARE,” and 4) a button labeled “PLAY AGAIN.” Do not show any other text. The SHARE button should create an image that contains at least the game title “The Uncertainty Meter,” the final score, the high score, and a simple glowing circle background, and then open the device’s native share sheet so the user can share this image. The PLAY AGAIN button should reset the total score to zero and start a new game from the first round.
++
++Visual style: Use a simple dark background (for example a dark gradient). The growing circle should be glowing and smooth. When the player taps and the ideal circle is shown, draw the ideal circle in red. Animations should be smooth. Apart from numbers (score and high score) and the text on the PLAY, SHARE, and PLAY AGAIN buttons, do not show any other text during gameplay.
++
++Storage: Store the high score locally on the device (for example using local storage or the platform’s built-in local persistence). Load the high score on app start and display it on the game screen and on the Game Over screen.
++
++Produce all code needed for this complete, working app that follows these instructions exactly
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-27 18:13:57.852967
++Code the following app
++```
++Create a very simple mobile game called “The Uncertainty Meter.” The game must be on the home page when the app opens. Do not use any external dependencies. Everything must work offline and be self-contained.
++
++The app has two screens: a home screen and a game screen.
++
++Home screen: When the app opens, show a clean home screen with a dark background. In the center, show a big button with the text “PLAY.” Above or below the button, show one short line of text that explains the game, for example: “Tap when the growing circle reaches the hidden ideal size.” There should be no other text and no extra buttons. When the user taps the PLAY button, go to the game screen and start the first round immediately.
++
++Game screen – general layout: The background should be dark (for example a dark gradient). In the center of the screen, draw a glowing circle. At the top of the screen, show only numbers: the current total score, and the stored high score. Do not show any other text during gameplay. The game is played in rounds, one round after another, until the player fails.
++
++Game screen – round logic: At the start of each round, do the following steps. 1) Set the growing circle’s radius to a very small value (for example close to zero). 2) Choose a random target radius for the “ideal circle.” The ideal circle radius must always be fairly big. It must never be smaller than 20% of the shortest side of the screen, and never larger than 40% of the shortest side of the screen. This target radius is not drawn yet, only stored internally. 3) Start animating the growing circle: its radius increases smoothly over time from the small starting radius upward. The growth speed must be moderate, not too fast: it should take about 2–3 seconds for the growing circle to reach the maximum possible ideal radius range (40% of the shortest screen side). The animation must be smooth.
++
++Player input: While the circle is growing, if the player taps anywhere on the screen, stop the growth immediately. Freeze the growing circle at its current radius (call this radius R_tap). Then draw the ideal circle in red on top of it, centered at the same point, using the target radius (call this radius R_ideal). The red ideal circle should be clearly visible so the player can see the difference between their circle and the ideal circle.
++
++Success or failure condition: After drawing both circles (the tapped circle and the red ideal circle), decide if the player succeeded in this round. The tap is considered successful if the tapped circle is fully inside the ideal circle. In simple terms, success means R_tap is less than or equal to R_ideal. If R_tap is greater than R_ideal, the player has “overshot” the ideal size and the game should end.
++
++Scoring: For each successful round (R_tap <= R_ideal), calculate the round score as the absolute difference between the two radii: |R_ideal − R_tap|. Add this round score to a running total score. Display the running total score as a number at the top of the screen during the game. After a short delay (for example 0.5–1 second) showing both circles, clear the circles and start the next round using the same round logic: reset the growing circle to small, choose a new random ideal radius, and start the growth again. The game continues round after round until the player fails.
++
++Game over: If the player fails (R_tap > R_ideal), stop the game and show a Game Over overlay on top of the game screen. The background can stay dark. On the Game Over view, show: 1) the final total score, 2) the stored high score (update the high score if the current score is higher than the previous best), 3) a button labeled “SHARE,” and 4) a button labeled “PLAY AGAIN.” Do not show any other text. The SHARE button should create an image that contains at least the game title “The Uncertainty Meter,” the final score, the high score, and a simple glowing circle background, and then open the device’s native share sheet so the user can share this image. The PLAY AGAIN button should reset the total score to zero and start a new game from the first round.
++
++Visual style: Use a simple dark background (for example a dark gradient). The growing circle should be glowing and smooth. When the player taps and the ideal circle is shown, draw the ideal circle in red. Animations should be smooth. Apart from numbers (score and high score) and the text on the PLAY, SHARE, and PLAY AGAIN buttons, do not show any other text during gameplay.
++
++Storage: Store the high score locally on the device (for example using local storage or the platform’s built-in local persistence). Load the high score on app start and display it on the game screen and on the Game Over screen.
++
++Produce all code needed for this complete, working app that follows these instructions exactly
++```
++
++Generate an app logo and update the app metadata title and description.
